@@ -5,6 +5,8 @@ let eraserBtn = document.getElementById("#eraserBtn");
 let clearBtn = document.getElementById("clearBtn");
 let sizeValue = document.querySelector(".size-value");
 let sizeSlider = document.querySelector(".size-slider");
+let grid = document.getElementById("#div-container");
+
 
 function updateSizeValue (value) {
     sizeValue.innerHTML = `${sizeSlider.value} x ${sizeSlider.value}`;
@@ -12,16 +14,36 @@ function updateSizeValue (value) {
 
 sizeSlider.addEventListener('input', function (e) {
     updateSizeValue();
+    updateGrid();
 })
 
+function createDiv () {
+    let grid = document.querySelector("#div-container");
+    const div = document.createElement("div");
+    div.classList.add("div");
+    div.style.border = "50px solid";
+    grid.appendChild(div);
+}
+
+function reloadGrid () {
+    clearGrid();
+    updateGrid(currentSize);
+}
+
+
+function clearGrid() {
+    grid.innerHTML = ''
+  }
+
+
+
+function updateGrid () {
+    for (let i = 0; i < sizeSlider.value * sizeSlider.value; i++) {
+        createDiv();
+    }
+}
 
 
 
 
-const container = document.querySelector("#div-container");
-const div = document.createElement("div");
-div.classList.add("div");
-div.style.backgroundColor = "black";
-div.style.border = "16px solid";
-container.appendChild(div);
 

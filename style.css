@@ -13,7 +13,7 @@ header {
     padding: 20px;
     font-weight: bold;
     text-align: center;
-    font-size: 48px;
+    font-size: 68px;
 }
 
 footer {
@@ -31,6 +31,8 @@ footer {
 
 main {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #div-container {
@@ -100,5 +102,13 @@ input[type=range]::-webkit-slider-thumb {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
-
+#div-container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: green;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
 
