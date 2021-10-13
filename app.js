@@ -17,33 +17,26 @@ sizeSlider.addEventListener('input', function (e) {
     updateGrid();
 })
 
-function createDiv () {
+
+
+function deleteDiv() {
     let grid = document.querySelector("#div-container");
-    const div = document.createElement("div");
-    div.classList.add("div");
-    div.style.border = "50px solid";
-    grid.appendChild(div);
+    grid.removeChild(div);
 }
 
-function reloadGrid () {
-    clearGrid();
-    updateGrid(currentSize);
-}
-
-
-function clearGrid() {
-    grid.innerHTML = ''
-  }
-
-
+//    let grid = document.querySelector("#div-container");
+//grid.removeChild(div);
 
 function updateGrid () {
+
     for (let i = 0; i < sizeSlider.value * sizeSlider.value; i++) {
-        createDiv();
+        let grid = document.querySelector("#div-container");
+        const div = document.createElement("div");
+        div.classList.add("div");
+        div.style.width = "512px";
+        div.style.height = "512px";
+        div.style.border = "1px solid";
+        grid.appendChild(div);
     }
 }
-
-
-
-
 

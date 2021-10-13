@@ -103,12 +103,22 @@ input[type=range]::-webkit-slider-thumb {
   }
 
 #div-container {
-    display: grid;
-    width: 500px;
-    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 500;
+    width: 512px;
+    height: 512px;
     background-color: green;
     margin: 0;
     padding: 0;
     gap: 0;
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
