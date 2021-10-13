@@ -74,8 +74,14 @@ button {
     border-radius: 5px;
 }
 
-input[type=range]::-moz-range-thumb {
-    background-color: green;
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #3d5a80;
+    border-radius: 50%;
+
   }
 
 
@@ -94,8 +100,5 @@ input[type=range]::-moz-range-thumb {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
-input[type='color']:active {
-    transition: transform 0.05s ease-in-out;
-    transform: scale(1);
-  }
+
 

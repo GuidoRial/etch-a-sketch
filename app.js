@@ -4,18 +4,15 @@ let rainbowBtn = document.getElementById("#rainbowBtn");
 let eraserBtn = document.getElementById("#eraserBtn");
 let clearBtn = document.getElementById("clearBtn");
 let sizeValue = document.querySelector(".size-value");
-let sizeSlider = document.getElementById("#sizeSlider");
-
-
-
+let sizeSlider = document.querySelector(".size-slider");
 
 function updateSizeValue (value) {
-    sizeValue.innerHTML = `{value} x {value}`
+    sizeValue.innerHTML = `${sizeSlider.value} x ${sizeSlider.value}`;
 }
 
-
-sizeSlider.onmousemove = (e) => updateSizeValue()
-
+sizeSlider.addEventListener('input', function (e) {
+    updateSizeValue();
+})
 
 
 
