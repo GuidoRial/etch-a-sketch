@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: roboto Condensed;
+    font-size: 20px;
+    background-color: #F5F3F5;
+    color: #3d5a80;
+}
+
+
+header {
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 48px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3d5a80;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    font-size: 25px;
+
+}
+
+main {
+    display: flex;
+}
+
+#div-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 10px 50px 10px 50px;
+    background-color: transparent;
+    border: 2px solid #3d5a80;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    cursor:pointer;
+}
+
+#button-container {
+    padding: 30px;
+    margin: 30px;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#colorPicker {
+    border-radius: 50%;
+}
+
+.size-slider {
+    cursor:pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    background-color: #DDDDDD;
+    outline: none;
+    border-radius: 5px;
+}
+
+input[type=range]::-moz-range-thumb {
+    background-color: green;
+  }
+
+
+
+#colorPicker {
+    -webkit-appearance: none;
+    border: none;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+}
+
+#colorPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+input[type='color']:active {
+    transition: transform 0.05s ease-in-out;
+    transform: scale(1);
+  }
+
