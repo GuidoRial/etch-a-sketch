@@ -35,11 +35,7 @@ main {
     align-items: center;
 }
 
-#div-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 button {
     padding: 10px 50px 10px 50px;
@@ -104,10 +100,8 @@ input[type=range]::-webkit-slider-thumb {
 
 #div-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-shrink: 500;
+
     width: 512px;
     height: 512px;
     background-color: green;
@@ -118,7 +112,8 @@ input[type=range]::-webkit-slider-thumb {
 
 .div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    flex: 64 1 0%;
+
 }
 
