@@ -24,14 +24,10 @@ function createDivs () {
         let grid = document.querySelector("#div-container");
         const div = document.createElement("div");
         div.classList.add("div");
-
-        div.style.border = "1px solid";
+        div.style.border = "0px solid";
         grid.appendChild(div);
     }
 }
-
-
-
 
 
 function updateGrid () {
@@ -48,5 +44,4 @@ function clearBoard () {
 //Now it only deletes the divs, in the future I want this botton to paint everything white, but by now this is good enough as i want to be able to fit the squares where they should go
 clearBtn.addEventListener("click", function (e) {
     clearBoard();
-    console.log("jaja gil");
 })

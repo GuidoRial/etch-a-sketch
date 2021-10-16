@@ -100,8 +100,8 @@ input[type=range]::-webkit-slider-thumb {
 
 #div-container {
     display: flex;
-    justify-content: center;
-
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 512px;
     height: 512px;
     background-color: green;
@@ -112,8 +112,8 @@ input[type=range]::-webkit-slider-thumb {
 
 .div {
     display: flex;
-    flex-wrap: wrap;
-    flex: 64 1 0%;
-
+    width: 8px;
+    flex-grow: 1;
+    background-color: red;
 }
 
