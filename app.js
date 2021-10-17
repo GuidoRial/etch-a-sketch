@@ -1,4 +1,3 @@
-let colorPicker = document.getElementById("colorPicker");
 let colorBtn = document.getElementById("colorBtn");
 let rainbowBtn = document.getElementById("rainbowBtn");
 let eraserBtn = document.getElementById("eraserBtn");
@@ -6,17 +5,13 @@ let clearBtn = document.getElementById("clearBtn");
 let sizeValue = document.querySelector(".size-value");
 let sizeSlider = document.querySelector(".size-slider");
 let grid = document.getElementById("#container");
-let color = "black";
-
-
-createDivs();
 
 //change the value shown in the DOM as you slide the slider
 function updateSizeValue (value) {
     sizeValue.innerHTML = `${sizeSlider.value} x ${sizeSlider.value}`;
 }
 
-//when you change the value of the slider, change the size of the grid
+//when you change the value of the slider, change the size of the grid. It does the same as the clear button so that you don't have to change size and then press it
 sizeSlider.addEventListener('input', function (e) {
     updateSizeValue();
     updateGrid();
@@ -33,67 +28,55 @@ function createDivs () {
     }
 }
 
-
+function deleteDivs () {
+    let clear = Array.from(document.querySelectorAll(".div"));
+    clear.forEach(wipe => wipe.remove());
+}
 
 function updateGrid () {
     deleteDivs();
     createDivs();
-
-}
-
-function deleteDivs () {
-    let clear = Array.from(document.querySelectorAll(".div"));
-    clear.forEach(wipe => wipe.remove());
 }
 
 function clearBoard () {
     deleteDivs();
     createDivs();
 }
-//it deletes and adds the divs again, but they have the default background color (white)
-clearBtn.addEventListener("click", function (e) {
-    clearBoard();
-    activateColorMode();
-})
-
-function activateColorMode () {
-    console.log("color activated");
-    container.addEventListener('mouseover', function (e) {
-
-        e.target.style.backgroundColor = "black";
-
-    })
-}
-
-function activateRainbowMode () {
-    console.log("rainbow activated");
-    container.addEventListener('mouseover', function (e) {
-
-        e.target.style.backgroundColor = getRandomColor();
-
-})
-}
-
-function activateEraserMode () {
-    console.log("eraser activated");
-    container.addEventListener('mouseover', function (e) {
-
-        e.target.style.backgroundColor = "white";
-
-    })
-}
-
-colorBtn.addEventListener("click", activateColorMode);
-
-rainbowBtn.addEventListener("click", activateRainbowMode);
-
-eraserBtn.addEventListener("click", activateEraserMode);
 
 function getRandomColor() {
     let red = String(Math.floor(Math.random() * 255));
     let green = String(Math.floor(Math.random() * 255));
     let blue = String(Math.floor(Math.random() * 255));
-  
     return `rgb(${red}, ${green}, ${blue})`;
   }
 
+function activateClassicMode () {
+    container.addEventListener('mouseover', function (e) {
+        e.target.style.backgroundColor = "black";
+    })
+}
+
+function activateRainbowMode () {
+    container.addEventListener('mouseover', function (e) {
+        e.target.style.backgroundColor = getRandomColor();
+})
+}
+
+function activateEraserMode () {
+    container.addEventListener('mouseover', function (e) {
+        e.target.style.backgroundColor = "white";
+    })
+}
+
+clearBtn.addEventListener("click", function (e) {
+    clearBoard();
+    activateClassicMode();
+})
+
+colorBtn.addEventListener("click", activateClassicMode);
+
+rainbowBtn.addEventListener("click", activateRainbowMode);
+
+eraserBtn.addEventListener("click", activateEraserMode);
+
+createDivs();
