@@ -49,18 +49,3 @@ clearBtn.addEventListener("click", function (e) {
 });
 
 
-colorBtn.addEventListener("click", colorChange() {
-
-});
-
-function colorChange () {
-    //Cambia el background color de .div al color que yo seleccione en colorPicker
-}
-
-eraserBtn.addEventListener("click", eraserFunction() {
-    //Cambia el background color de los .div a blanck
-})
-
-rainbowBtn.addEventListener("click", rainbowFunction() {
-    //Cambia el background color de los .div a un rgb aleatorizado con mathfloor y mathrandom
-})
