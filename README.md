@@ -1,6 +1,7 @@
 # etch-a-sketch
 
 ## Live Preview
+https://guidorial.github.io/etch-a-sketch/
 
 ## General Info
     This was the most challenging project yet. It was part of The Odin Project curriculum and my second project using JavaScript at all (outside some excercise). 
