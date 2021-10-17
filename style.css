@@ -98,7 +98,7 @@ input[type=range]::-webkit-slider-thumb {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
-  #div-container {
+  #container {
     display: flex;
     flex-wrap: wrap;
     width: 512px;
@@ -113,14 +113,13 @@ input[type=range]::-webkit-slider-thumb {
 .div {
     display: flex;
     flex-grow: 1;
-    background-color: transparent;
 }
 
-.eraser {
-    background-color: white;
-}
 
-.color-mode {
+.div-black {
     background-color: black;
 }
 
+.div-white {
+    background-color: white;
+}
