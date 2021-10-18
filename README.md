@@ -20,6 +20,6 @@ https://guidorial.github.io/etch-a-sketch/
     *  JavaScript
       -  How to define variables to manipulate the DOM
       -  How to give life to a slider
-      -  How to add event listeners and assing a function to it
+      -  How to add event listeners and assign a function to it
       -  How to fill a container with divs and change it size so that it fits perfectly
       -  How to get a random color
