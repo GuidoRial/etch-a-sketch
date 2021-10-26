@@ -64,7 +64,7 @@ function activateRainbowMode () {
 
 function activateEraserMode () {
     container.addEventListener('mouseover', function (e) {
-        e.target.style.backgroundColor = "white";
+        e.target.style.backgroundColor = "#F5F3F5";
     })
 }
 
